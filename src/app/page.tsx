@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 
-import { SliceZone } from "@prismicio/react";
+import { PrismicRichText, SliceZone } from "@prismicio/react";
 import * as prismic from "@prismicio/client";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import RichText from "@/slices/RichText";
 
 // This component renders your homepage.
 //
@@ -38,7 +39,10 @@ export default async function Index() {
     <div>
       <h1>Homepage</h1>
       <p> title : </p>
-      <h1>{home.data.page_title[0]?.text}</h1>
+      {/* <h1>{home.data.page_title[0]}</h1> */}
+      <h1>
+        <PrismicRichText field={home.data.page_title} />
+      </h1>
     </div>
   )
 }
