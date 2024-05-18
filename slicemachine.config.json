@@ -1,7 +1,9 @@
 {
   "repositoryName": "test-club",
   "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./src/slices"],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": [
+    "./src/slices"
+  ],
+  "localSliceSimulatorURL": "https://test-club.vercel.app/slice-simulator",
   "apiEndpoint": ""
 }
